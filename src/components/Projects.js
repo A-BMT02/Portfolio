@@ -69,15 +69,18 @@ export default function Projects() {
           </div>
 
           <div className="flex space-x-6 justify-center ">
-            <div className="shadow gradient flex space-x-2 items-center bg-lblue pl-4 pr-4 pt-2 pb-2">
-              <p>Live</p>
-              <img className="w-5 h-5" src={live} />
-            </div>
-
-            <div className="shadow gradient flex space-x-4 items-center bg-lblue p-4">
-              <p>Github</p>
-              <img className="w-5 h-5" src={github} />
-            </div>
+            <a target="_blank" href="http://spost.onrender.com/">
+              <div className="shadow gradient flex space-x-2 items-center bg-lblue pl-4 pr-4 pt-2 pb-2">
+                <p>Live</p>
+                <img className="w-5 h-5" src={live} />
+              </div>
+            </a>
+            <a target="_blank" href="https://github.com/A-BMT02/Spost">
+              <div className="shadow gradient flex space-x-2 items-center bg-lblue  pl-4 pr-4 pt-2 pb-2">
+                <p>Github</p>
+                <img className="w-5 h-5" src={github} />
+              </div>
+            </a>
           </div>
         </div>
       </div>

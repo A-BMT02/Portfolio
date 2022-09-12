@@ -23,9 +23,18 @@ export default function Home() {
         </p>
         <div className="flex justify-between">
           <div className="mt-12 flex space-x-10">
-            <img className="w-12 h-12 lg:w-16 lg:h-16" src={twitter} />
-            <img className="w-12 h-12 lg:w-16 lg:h-16" src={github} />
-            <img className="w-12 h-12 lg:w-16 lg:h-16" src={linkedin} />
+            <a target="_blank" href="https://twitter.com/AhmadBMTahir">
+              <img className="w-12 h-12 lg:w-16 lg:h-16" src={twitter} />
+            </a>
+            <a target="_blank" href="https://github.com/A-BMT02">
+              <img className="w-12 h-12 lg:w-16 lg:h-16" src={github} />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/ahmad-tahir-561876232/"
+            >
+              <img className="w-12 h-12 lg:w-16 lg:h-16" src={linkedin} />
+            </a>
           </div>
         </div>
       </div>

@@ -21,7 +21,7 @@ export default function About() {
             <br></br>
             <p className="tracking-wide">
               I started my programming journey with the popular CS50 harvard edx
-              course. I spent some time solving DSA questions . I came acrorss
+              course. I spent some time solving DSA questions . I came across
               web development and have since then fallen in love with it
             </p>
           </div>
