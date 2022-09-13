@@ -7,11 +7,36 @@ import express from "../images/express.png";
 import mongodb from "../images/mongodb.png";
 import live from "../images/live.png";
 import github from "../images/github.png";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 export default function Projects() {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+  const variant = {
+    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0 },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
   return (
-    <div className="mt-20 text-owhite flex flex-col items-center">
-      <p className="self-start text-3xl md:text-4xl mb-10">Projects</p>
+    <motion.div
+      ref={ref}
+      variants={variant}
+      initial="hidden"
+      animate={control}
+      className="mt-20 text-owhite flex flex-col items-center"
+    >
+      <p className="self-start text-3xl md:text-4xl mb-10 border borer-b-8 border-t-0 border-l-0 border-r-0 border-oorange w-fit pb-1">
+        Projects
+      </p>
       <div className="lg:p-5 max-w-[500px] gradient flex flex-col items-center lg:flex-row lg:max-w-[1400px] lg:space-x-10 ">
         <div className="w-full h-full">
           <img className="" src={home} />
@@ -84,6 +109,6 @@ export default function Projects() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

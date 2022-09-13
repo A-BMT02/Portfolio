@@ -10,12 +10,12 @@ import Contact from "../components/Contact";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col font-poppins m-5 ml-10 mr-10 lg:ml-20 lg:mr-20 ">
+    <div className="relative flex flex-col font-poppins m-5 ml-5 mr-5 md:ml-20 md:mr-20 ">
       <Navbar />
-      <div className="h-[100%] mt-10 flex flex-col space-y-4 lg:space-y-6 bg-dblue text-owhite">
+      <div className="h-[70vh] mt-10 flex flex-col space-y-4 lg:space-y-6 bg-dblue text-owhite">
         <p className="text-xl md:text-3xl">Welcome, I am</p>
         <p className="text-2xl md:text-4xl">Ahmad Tahir</p>
-        <p className="color text-2xl md:text-5xl font-bold">
+        <p className="color text-2xl md:text-5xl font-bold text-oorange">
           Fullstack Developer
         </p>
         <p className="text-lg md:text-3xl w-full max-w-[500px] tracking-wide">

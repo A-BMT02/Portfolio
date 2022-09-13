@@ -4,8 +4,26 @@ import github from "../images/github.png";
 import linkedin from "../images/linkedin.png";
 import mail from "../images/mail.png";
 import { send } from "emailjs-com";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 export default function Contact() {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+  const variant = {
+    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0 },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
@@ -34,8 +52,27 @@ export default function Contact() {
   };
 
   return (
-    <div className="mb-14 space-y-10 mt-10 flex flex-col text-owhite space-y-4 ">
-      <p className="text-3xl md:text-4xl">Contact</p>
+    <motion.div
+      ref={ref}
+      variants={variant}
+      initial="hidden"
+      animate={control}
+      className="mb-14 space-y-10 mt-10 flex flex-col text-owhite space-y-4 "
+    >
+      <p className=" text-3xl md:text-4xl border borer-b-8 border-t-0 border-l-0 border-r-0 border-oorange w-fit pb-1">
+        Contact
+      </p>
+      <p className="text-lg">
+        You can contact me via
+        <a
+          className="underline-offset-2 underline-offset-2"
+          href="mailto:ahmadbmtahir@gmail.com"
+        >
+          <span> ahmadbmtahir@gmail </span>
+        </a>
+        or any of my social media below
+      </p>
+
       <div className="flex space-x-4 lg:space-x-6">
         <a target="_blank" href="https://twitter.com/AhmadBMTahir">
           <img className="w-10 h-10 md:w-16 md:h-16" src={twitter} />
@@ -49,9 +86,9 @@ export default function Contact() {
         >
           <img className="w-10 h-10 md:w-16 md:h-16" src={linkedin} />
         </a>
-        <a target="_blank" href="mailto:ahmadbmtahir@gmail.com">
+        {/* <a target="_blank" href="mailto:ahmadbmtahir@gmail.com">
           <img className="w-10 h-10 md:w-16 md:h-16" src={mail} />
-        </a>
+        </a> */}
       </div>
       <div className="flex items-center space-x-2 w-full justify-center">
         <hr className="w-5/12" />
@@ -100,6 +137,6 @@ export default function Contact() {
           </button>
         </div>
       </form>
-    </div>
+    </motion.div>
   );
 }

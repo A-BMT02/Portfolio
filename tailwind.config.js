@@ -6,6 +6,7 @@ module.exports = {
       dblue: "#040F1E",
       lblue: "#263852",
       owhite: "#FFFFFF",
+      oorange: "#fc8803",
     },
     fontFamily: {
       poppins: ["Poppins"],

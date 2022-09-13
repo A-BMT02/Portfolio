@@ -1,10 +1,36 @@
 import React from "react";
 import image from "../images/image.png";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 export default function About() {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+  const variant = {
+    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0 },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   return (
-    <div className="text-owhite mt-20">
-      <p className="text-3xl lg:text-4xl md:mb-5">About</p>
+    <motion.div
+      ref={ref}
+      variants={variant}
+      initial="hidden"
+      animate={control}
+      className="text-owhite mt-20"
+    >
+      <p className="text-3xl lg:text-4xl md:mb-5 border borer-b-8 border-t-0 border-l-0 border-r-0 border-oorange w-fit pb-1 ">
+        About
+      </p>
       <div className="flex flex-col-reverse items-center space-y-10 md:space-x-10 flex-col md:flex-row ">
         <div className=" md:text-xl flex flex-col space-y-4 md:w-3/4 ">
           <div>
@@ -33,6 +59,6 @@ export default function About() {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
