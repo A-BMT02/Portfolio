@@ -1,6 +1,6 @@
 import React from "react";
 import html from "../images/html.png";
-import css from "../images/css.png";
+import css from "../images/css.svg";
 import javascript from "../images/javascript.png";
 import react from "../images/react.png";
 import node from "../images/node.png";
@@ -39,31 +39,40 @@ export default function Skills() {
       </p>
       <div className="flex flex-col space-y-10 max-w-[800px]">
         <div className="flex justify-between">
-          <div className="flex items-center">
+          <div className="flex items-center flex-col space-y-2 ">
             <img className="w-10 h-10 lg:w-16 lg:h-16" src={html} />
+            <p className="text-sm md:text-lg">HTML</p>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center flex-col space-y-2">
             <img className="w-10 h-10 lg:w-16 lg:h-16" src={css} />
+            <p className="text-sm md:text-lg">CSS</p>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center flex-col space-y-2">
             <img className="w-10 h-10 lg:w-16 lg:h-16" src={javascript} />
+            <p className="text-sm md:text-lg">JAVASCRIPT</p>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center flex-col space-y-2">
             <img className="w-10 h-10 lg:w-16 lg:h-16" src={react} />
+            <p className="text-sm md:text-lg">REACT</p>
           </div>
         </div>
         <div className="flex justify-between">
-          <div className="flex items-center">
+          <div className="flex items-center flex-col space-y-2">
             <img className="w-10 h-10 lg:w-16 lg:h-16" src={node} />
+            <p className="text-sm md:text-lg">NODE</p>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center flex-col space-y-2">
             <img className="w-10 h-10 lg:w-16 lg:h-16" src={express} />
+            <p className="text-sm md:text-lg">EXPRESS</p>
           </div>
-          <div className="flex items-center">
+
+          <div className="flex items-center flex-col space-y-2">
             <img className="w-10 h-10 lg:w-16 lg:h-16" src={git} />
+            <p className="text-sm md:text-lg">GIT/GITHUB</p>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center flex-col space-y-2">
             <img className="w-10 h-10 lg:w-16 lg:h-16" src={mongodb} />
+            <p className="text-sm md:text-lg">MONGODB</p>
           </div>
         </div>
       </div>
