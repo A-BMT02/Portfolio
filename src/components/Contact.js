@@ -1,10 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import twitter from "../images/twitter.png";
 import github from "../images/github.png";
 import linkedin from "../images/linkedin.png";
 import mail from "../images/mail.png";
+import { send } from "emailjs-com";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+
+  const onSubmit = (e) => {
+    console.log("here");
+    e.preventDefault();
+    send(
+      "service_bxitwtb",
+      "template_scanoi6",
+      {
+        from_name: name,
+        to_name: "Ahmad",
+        message,
+        reply_to: subject,
+      },
+      "ftD4KKgQVP08NW2-q"
+    )
+      .then((res) => {
+        console.log("succcess!", res);
+      })
+      .catch((err) => {
+        console.log("failed", err);
+      });
+  };
+
   return (
     <div className="mb-14 space-y-10 mt-10 flex flex-col text-owhite space-y-4 ">
       <p className="text-3xl md:text-4xl">Contact</p>
@@ -33,22 +61,41 @@ export default function Contact() {
       <form className="flex flex-col space-y-2 lg:space-y-4 max-w-[600px] ">
         <div className="flex-flex-col space-y-1">
           <p className="text-xl md:2xl ">Name</p>
-          <input className="bg-owhite rounded-md p-2 w-full max-w-[300px] text-dblue " />
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="bg-owhite rounded-md p-2 w-full max-w-[300px] text-dblue "
+          />
         </div>
         <div className="flex-flex-col space-y-1">
           <p className="text-xl md:2xl">Email</p>
-          <input className="bg-owhite rounded-md p-2 w-full max-w-[300px] text-dblue " />
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="bg-owhite rounded-md p-2 w-full max-w-[300px] text-dblue "
+          />
         </div>
         <div className="flex-flex-col space-y-1">
           <p className="text-xl md:2xl">Subject</p>
-          <input className="bg-owhite rounded-md p-2 w-full max-w-[300px] text-dblue " />
+          <input
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+            className="bg-owhite rounded-md p-2 w-full max-w-[300px] text-dblue "
+          />
         </div>
         <div className="flex-flex-col space-y-1 ">
           <p className="text-xl md:2xl">Message</p>
-          <textarea className="h-60 bg-owhite rounded-md p-2 w-full max-w-[600px] text-dblue " />
+          <textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            className="h-60 bg-owhite rounded-md p-2 w-full max-w-[600px] text-dblue "
+          />
         </div>
         <div className="self-end text-xl ">
-          <button className="bg-lblue p-2 rounded-lg hover:text-white hover:bg-dblue hover:border hover:border-white">
+          <button
+            onClick={(e) => onSubmit(e)}
+            className="bg-lblue p-2 rounded-lg hover:text-white hover:bg-dblue hover:border hover:border-white"
+          >
             Send Message
           </button>
         </div>
