@@ -32,7 +32,7 @@ export default function Projects() {
       variants={variant}
       initial="hidden"
       animate={control}
-      className="mt-20 text-owhite flex flex-col items-center min-h-[100vh]"
+      className="mt-20 text-owhite flex flex-col items-center"
     >
       <p className="self-start text-3xl md:text-4xl mb-10 border borer-b-8 border-t-0 border-l-0 border-r-0 border-oorange w-fit pb-1">
         Projects

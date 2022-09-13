@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Sidebar({ open, cycleOpen }) {
+export default function Sidebar({ open, cycleOpen, scroll }) {
   const sidebarRef = useRef(null);
 
   const variant = {
@@ -33,6 +33,7 @@ export default function Sidebar({ open, cycleOpen }) {
             animate="open"
             exit="closed"
             variants={variant}
+            onClick={() => scroll("home")}
           >
             Home
           </motion.p>
@@ -43,6 +44,7 @@ export default function Sidebar({ open, cycleOpen }) {
             animate="open"
             exit="closed"
             variants={variant}
+            onClick={() => scroll("about")}
           >
             About
           </motion.p>
@@ -53,6 +55,7 @@ export default function Sidebar({ open, cycleOpen }) {
             animate="open"
             exit="closed"
             variants={variant}
+            onClick={() => scroll("skills")}
           >
             Technologies
           </motion.p>
@@ -63,6 +66,7 @@ export default function Sidebar({ open, cycleOpen }) {
             animate="open"
             exit="closed"
             variants={variant}
+            onClick={() => scroll("projects")}
           >
             Projects
           </motion.p>
@@ -73,6 +77,7 @@ export default function Sidebar({ open, cycleOpen }) {
             animate="open"
             exit="closed"
             variants={variant}
+            onClick={() => scroll("contact")}
           >
             Contact
           </motion.p>

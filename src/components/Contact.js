@@ -57,7 +57,7 @@ export default function Contact() {
       variants={variant}
       initial="hidden"
       animate={control}
-      className="mb-14 space-y-10 mt-10 flex flex-col text-owhite space-y-4 min-h-[100vh]"
+      className="mb-14 space-y-10 mt-10 flex flex-col text-owhite space-y-4 "
     >
       <p className=" text-3xl md:text-4xl border borer-b-8 border-t-0 border-l-0 border-r-0 border-oorange w-fit pb-1">
         Contact

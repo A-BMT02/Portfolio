@@ -26,7 +26,7 @@ export default function About() {
       variants={variant}
       initial="hidden"
       animate={control}
-      className="text-owhite mt-20 min-h-[100vh]"
+      className="text-owhite mt-20"
     >
       <p className="text-3xl lg:text-4xl md:mb-5 border borer-b-8 border-t-0 border-l-0 border-r-0 border-oorange w-fit pb-1 ">
         About

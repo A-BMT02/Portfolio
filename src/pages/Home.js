@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Navbar from "../components/Navbar";
 import twitter from "../images/twitter.png";
 import github from "../images/github.png";
@@ -11,10 +11,34 @@ import Contact from "../components/Contact";
 export default function Home() {
   const date = new Date();
   const year = date.getFullYear();
+
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const scroll = (to) => {
+    switch (to) {
+      case "home":
+        return homeRef.current.scrollIntoView();
+      case "about":
+        return aboutRef.current.scrollIntoView();
+      case "skills":
+        return skillsRef.current.scrollIntoView();
+      case "projects":
+        return projectsRef.current.scrollIntoView();
+      case "contact":
+        return contactRef.current.scrollIntoView();
+    }
+  };
   return (
-    <div className="relative flex flex-col font-poppins m-5 ml-5 mr-5 md:ml-20 md:mr-20 ">
-      <Navbar />
-      <div className="h-[70vh] mt-10 flex flex-col space-y-4 lg:space-y-6 bg-dblue text-owhite">
+    <div
+      ref={homeRef}
+      className="relative flex flex-col font-poppins m-5 ml-5 mr-5 md:ml-20 md:mr-20 "
+    >
+      <Navbar scroll={scroll} />
+      <div className=" mt-10 flex flex-col space-y-4 lg:space-y-6 bg-dblue text-owhite">
         <p className="text-xl md:text-3xl">Welcome, I am</p>
         <p className="text-2xl md:text-4xl">Ahmad Tahir</p>
         <p className="color text-2xl md:text-5xl font-bold text-oorange">
@@ -40,12 +64,20 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <div ref={aboutRef}>
+        <About />
+      </div>
+      <div ref={skillsRef}>
+        <Skills />
+      </div>
+      <div ref={projectsRef}>
+        <Projects />
+      </div>
+      <div ref={contactRef}>
+        <Contact />
+      </div>
       <div className="text-owhite flex justify-center mb-5">
-        <p>© {year} - Build by Ahmad Tahir</p>
+        <p>© {year} - Built by Ahmad Tahir</p>
       </div>
     </div>
   );
