@@ -40,15 +40,15 @@ export default function About() {
             </p>
             <br></br>
             <p className="tracking-wide">
-              I usally work with javascript technologies like React , Node ,
-              Express and MongoDb to create responsive and accessible websites.
+              I started my programming journey with the popular CS50 harvard edx
+              course. I came across web development and have since then fallen
+              in love with it
             </p>
-
             <br></br>
             <p className="tracking-wide">
-              I started my programming journey with the popular CS50 harvard edx
-              course. I spent some time solving DSA questions . I came across
-              web development and have since then fallen in love with it
+              I usally work with javascript technologies like React , Node ,
+              Express and MongoDb and Tailwind to create responsive and
+              accessible websites.
             </p>
           </div>
         </div>

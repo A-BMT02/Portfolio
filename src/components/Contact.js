@@ -44,10 +44,10 @@ export default function Contact() {
       "ftD4KKgQVP08NW2-q"
     )
       .then((res) => {
-        console.log("succcess!", res);
+        alert("Message sent successfully");
       })
       .catch((err) => {
-        console.log("failed", err);
+        alert("An error occured");
       });
   };
 
