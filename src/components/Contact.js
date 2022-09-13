@@ -63,12 +63,14 @@ export default function Contact() {
         Contact
       </p>
       <p className="text-lg">
-        You can contact me via
+        You can contact me via{" "}
         <a
           className="underline-offset-2 underline-offset-2"
           href="mailto:ahmadbmtahir@gmail.com"
         >
-          <span> ahmadbmtahir@gmail </span>
+          <span className="text-oorange border border-l-0 border-r-0 border-t-0">
+            ahmadbmtahir@gmail{" "}
+          </span>
         </a>
         or any of my social media below
       </p>
