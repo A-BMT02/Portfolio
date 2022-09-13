@@ -57,7 +57,7 @@ export default function Contact() {
       variants={variant}
       initial="hidden"
       animate={control}
-      className="mb-14 space-y-10 mt-10 flex flex-col text-owhite space-y-4 "
+      className="mb-14 space-y-10 mt-10 flex flex-col text-owhite space-y-4 min-h-[100vh]"
     >
       <p className=" text-3xl md:text-4xl border borer-b-8 border-t-0 border-l-0 border-r-0 border-oorange w-fit pb-1">
         Contact
@@ -125,7 +125,7 @@ export default function Contact() {
           <textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="h-60 bg-owhite rounded-md p-2 w-full max-w-[600px] text-dblue "
+            className="h-40 bg-owhite rounded-md p-2 w-full max-w-[500px] text-dblue "
           />
         </div>
         <div className="self-end text-xl ">

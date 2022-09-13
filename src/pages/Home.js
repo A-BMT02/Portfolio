@@ -9,6 +9,8 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 
 export default function Home() {
+  const date = new Date();
+  const year = date.getFullYear();
   return (
     <div className="relative flex flex-col font-poppins m-5 ml-5 mr-5 md:ml-20 md:mr-20 ">
       <Navbar />
@@ -42,6 +44,9 @@ export default function Home() {
       <Skills />
       <Projects />
       <Contact />
+      <div className="text-owhite flex justify-center mb-5">
+        <p>© {year} - Build by Ahmad Tahir</p>
+      </div>
     </div>
   );
 }
