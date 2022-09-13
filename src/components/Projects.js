@@ -40,24 +40,24 @@ export default function Projects() {
       <div className="lg:p-5 max-w-[500px] gradient flex flex-col items-center lg:flex-row lg:max-w-[1400px] lg:space-x-10 ">
         <div className="w-full h-full">
           <img className="" src={home} />
-          <div className="hidden lg:flex justify-center items-center mt-10 space-x-4 space-y-4 flex-wrap mb-5 text-xl">
-            <div className="flex space-x-2">
+          <div className="hidden text-md lg:flex justify-center items-center mt-10 space-x-4  mb-5 text-xl">
+            <div className="flex space-x-2 items-center">
               <img className="w-6 h-6" src={react} />
               <p>React</p>
             </div>
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 items-center ">
               <img className="w-6 h-6" src={node} />
               <p>Node</p>
             </div>
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 items-center">
               <img className="w-6 h-6" src={express} />
               <p>Express</p>
             </div>
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 items-center">
               <img className="w-6 h-6" src={mongodb} />
               <p>MongoDb</p>
             </div>
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 items-center">
               <img className="w-6 h-6" src={tailwind} />
               <p>Tailwind</p>
             </div>
@@ -70,26 +70,31 @@ export default function Projects() {
             Write your content once and post to all your social media profiles
           </p>
 
-          <div className=" flex lg:hidden justify-center items-center mt-10 space-x-4 space-y-4 flex-wrap mb-5">
-            <div className="flex space-x-2">
-              <img className="w-6 h-6" src={react} />
-              <p>React</p>
+          <div className=" space-y-4 flex flex-col lg:hidden justify-center items-center mt-10  mb-5">
+            <div className="flex space-x-4 ">
+              <div className="flex space-x-2">
+                <img className="w-6 h-6" src={react} />
+                <p>React</p>
+              </div>
+              <div className="flex space-x-2">
+                <img className="w-6 h-6" src={node} />
+                <p>Node</p>
+              </div>
+              <div className="flex space-x-2">
+                <img className="w-6 h-6" src={express} />
+                <p>Express</p>
+              </div>
             </div>
-            <div className="flex space-x-2">
-              <img className="w-6 h-6" src={node} />
-              <p>Node</p>
-            </div>
-            <div className="flex space-x-2">
-              <img className="w-6 h-6" src={express} />
-              <p>Express</p>
-            </div>
-            <div className="flex space-x-2">
-              <img className="w-6 h-6" src={mongodb} />
-              <p>MongoDb</p>
-            </div>
-            <div className="flex space-x-2">
-              <img className="w-6 h-6" src={tailwind} />
-              <p>Tailwind</p>
+
+            <div className="flex space-x-4">
+              <div className="flex space-x-2">
+                <img className="w-6 h-6" src={mongodb} />
+                <p>MongoDb</p>
+              </div>
+              <div className="flex space-x-2">
+                <img className="w-6 h-6" src={tailwind} />
+                <p>Tailwind</p>
+              </div>
             </div>
           </div>
 

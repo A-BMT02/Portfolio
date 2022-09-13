@@ -95,7 +95,7 @@ export default function Contact() {
         <p className="text-center">or</p>
         <hr className="w-5/12" />
       </div>
-      <form className="flex flex-col space-y-2 lg:space-y-4 max-w-[600px] ">
+      <form className="flex flex-col space-y-2 lg:space-y-4 max-w-[500px] ">
         <div className="flex-flex-col space-y-1">
           <p className="text-xl md:2xl ">Name</p>
           <input
