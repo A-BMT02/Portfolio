@@ -33,6 +33,7 @@ export default function Skills() {
       initial="hidden"
       animate={control}
       className="mt-20 text-2xl flex flex-col text-owhite space-y-4  "
+      transition={{ duration: 0.5 }}
     >
       <p className="text-3xl md:text-4xl mb-10 border borer-b-8 border-t-0 border-l-0 border-r-0 border-oorange w-fit pb-1">
         Skills

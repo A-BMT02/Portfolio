@@ -10,6 +10,8 @@ import github from "../images/github.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import snippet from "../images/snippet.png";
+import next from "../images/next.png";
 
 export default function Projects() {
   const control = useAnimation();
@@ -33,84 +35,152 @@ export default function Projects() {
       initial="hidden"
       animate={control}
       className="mt-20 text-owhite flex flex-col items-center"
+      transition={{ duration: 0.5 }}
     >
       <p className="self-start text-3xl md:text-4xl mb-10 border borer-b-8 border-t-0 border-l-0 border-r-0 border-oorange w-fit pb-1">
         Projects
       </p>
-      <div className="lg:p-5 max-w-[500px] gradient flex flex-col items-center lg:flex-row lg:max-w-[1400px] lg:space-x-10 ">
-        <div className="w-full h-full">
-          <img className="" src={home} />
-          <div className="hidden text-md lg:flex justify-center items-center mt-10 space-x-4  mb-5 text-xl">
-            <div className="flex space-x-2 items-center">
-              <img className="w-6 h-6" src={react} />
-              <p>React</p>
-            </div>
-            <div className="flex space-x-2 items-center ">
-              <img className="w-6 h-6" src={node} />
-              <p>Node</p>
-            </div>
-            <div className="flex space-x-2 items-center">
-              <img className="w-6 h-6" src={express} />
-              <p>Express</p>
-            </div>
-            <div className="flex space-x-2 items-center">
-              <img className="w-6 h-6" src={mongodb} />
-              <p>MongoDb</p>
-            </div>
-            <div className="flex space-x-2 items-center">
-              <img className="w-6 h-6" src={tailwind} />
-              <p>Tailwind</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="lg:p-0 p-5 flex flex-col space-y-4 ">
-          <p className="text-xl md:text-3xl text-center">Spost</p>
-          <p className=" md:text-xl text-center">
-            Write your content once and post to all your social media profiles
-          </p>
-
-          <div className=" space-y-4 flex flex-col lg:hidden justify-center items-center mt-10  mb-5">
-            <div className="flex space-x-4 ">
-              <div className="flex space-x-2">
+      <div className="flex flex-col space-y-20">
+        {/* spost */}
+        <div className="lg:p-5 max-w-[500px] gradient flex flex-col items-center lg:flex-row lg:max-w-[1400px] lg:space-x-10 ">
+          <div className="w-full h-full">
+            <img className="" src={home} />
+            <div className="hidden text-md lg:flex justify-center items-center mt-10 space-x-4  mb-5 text-xl">
+              <div className="flex space-x-2 items-center">
                 <img className="w-6 h-6" src={react} />
                 <p>React</p>
               </div>
-              <div className="flex space-x-2">
+              <div className="flex space-x-2 items-center ">
                 <img className="w-6 h-6" src={node} />
                 <p>Node</p>
               </div>
-              <div className="flex space-x-2">
+              <div className="flex space-x-2 items-center">
                 <img className="w-6 h-6" src={express} />
                 <p>Express</p>
               </div>
-            </div>
-
-            <div className="flex space-x-4">
-              <div className="flex space-x-2">
+              <div className="flex space-x-2 items-center">
                 <img className="w-6 h-6" src={mongodb} />
                 <p>MongoDb</p>
               </div>
-              <div className="flex space-x-2">
+              <div className="flex space-x-2 items-center">
                 <img className="w-6 h-6" src={tailwind} />
                 <p>Tailwind</p>
               </div>
             </div>
           </div>
 
-          <div className="flex space-x-6 justify-center ">
-            <a target="_blank" href="http://spost.onrender.com/">
-              <div className="shadow gradient flex space-x-2 items-center bg-lblue pl-4 pr-4 pt-2 pb-2">
-                <p>Live</p>
-                <img className="w-5 h-5" src={live} />
+          <div className="lg:p-0 p-5 flex flex-col space-y-4 ">
+            <p className="text-xl md:text-3xl text-center">Spost</p>
+            <p className=" md:text-xl text-center">
+              Write your content once and post to all your social media profiles
+            </p>
+
+            <div className=" space-y-4 flex flex-col lg:hidden justify-center items-center mt-10  mb-5">
+              <div className="flex space-x-4 ">
+                <div className="flex space-x-2">
+                  <img className="w-6 h-6" src={react} />
+                  <p>React</p>
+                </div>
+                <div className="flex space-x-2">
+                  <img className="w-6 h-6" src={node} />
+                  <p>Node</p>
+                </div>
+                <div className="flex space-x-2">
+                  <img className="w-6 h-6" src={express} />
+                  <p>Express</p>
+                </div>
               </div>
-            </a>
-            <a target="_blank" href="https://github.com/A-BMT02/Spost">
-              <div className="shadow gradient flex space-x-2 items-center bg-lblue  pl-4 pr-4 pt-2 pb-2">
-                <p>Github</p>
-                <img className="w-5 h-5" src={github} />
+
+              <div className="flex space-x-4">
+                <div className="flex space-x-2">
+                  <img className="w-6 h-6" src={mongodb} />
+                  <p>MongoDb</p>
+                </div>
+                <div className="flex space-x-2">
+                  <img className="w-6 h-6" src={tailwind} />
+                  <p>Tailwind</p>
+                </div>
               </div>
-            </a>
+            </div>
+
+            <div className="flex space-x-6 justify-center ">
+              <a target="_blank" href="http://spost.onrender.com/">
+                <div className="shadow gradient flex space-x-2 items-center bg-lblue pl-4 pr-4 pt-2 pb-2">
+                  <p>Live</p>
+                  <img className="w-5 h-5" src={live} />
+                </div>
+              </a>
+              <a target="_blank" href="https://github.com/A-BMT02/Spost">
+                <div className="shadow gradient flex space-x-2 items-center bg-lblue  pl-4 pr-4 pt-2 pb-2">
+                  <p>Github</p>
+                  <img className="w-5 h-5" src={github} />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* snippets */}
+        <div className="lg:p-5 max-w-[500px] gradient flex flex-col items-center lg:flex-row lg:max-w-[1400px] lg:space-x-10 ">
+          <div className="w-full h-full">
+            <img className="" src={snippet} />
+            <div className="hidden text-md lg:flex justify-center items-center mt-10 space-x-4  mb-5 text-xl">
+              <div className="flex space-x-2 items-center">
+                <img className="w-6 h-6" src={next} />
+                <p>NextJS</p>
+              </div>
+              <div className="flex space-x-2 items-center">
+                <img className="w-6 h-6" src={react} />
+                <p>React</p>
+              </div>
+              <div className="flex space-x-2 items-center">
+                <img className="w-6 h-6" src={tailwind} />
+                <p>Tailwind</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:p-0 p-5 flex flex-col space-y-4 ">
+            <p className="text-xl md:text-3xl text-center">Snippet</p>
+            <p className=" md:text-xl text-center">
+              Store your favorite code snippets online and browse through
+              available snippets to save time and increase productivity
+            </p>
+
+            <div className=" space-y-4 flex flex-col lg:hidden justify-center items-center mt-10  mb-5">
+              <div className="flex space-x-4 ">
+                <div className="flex space-x-2">
+                  <img className="w-6 h-6" src={next} />
+                  <p>NextJS</p>
+                </div>
+                <div className="flex space-x-2">
+                  <img className="w-6 h-6" src={react} />
+                  <p>React</p>
+                </div>
+              </div>
+
+              <div className="flex space-x-4">
+                <div className="flex space-x-2">
+                  <img className="w-6 h-6" src={tailwind} />
+                  <p>Tailwind</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex space-x-6 justify-center ">
+              <a target="_blank" href="https://codepets.vercel.app/">
+                <div className="shadow gradient flex space-x-2 items-center bg-lblue pl-4 pr-4 pt-2 pb-2">
+                  <p>Live</p>
+                  <img className="w-5 h-5" src={live} />
+                </div>
+              </a>
+              <a target="_blank" href="https://github.com/A-BMT02/snippets">
+                <div className="shadow gradient flex space-x-2 items-center bg-lblue  pl-4 pr-4 pt-2 pb-2">
+                  <p>Github</p>
+                  <img className="w-5 h-5" src={github} />
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
